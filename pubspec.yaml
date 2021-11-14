@@ -18,11 +18,13 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.11.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  material_floating_search_bar: ^0.3.4
+  intl: ^0.17.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -45,8 +47,48 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/icons/edit.png
+    - assets/icons/chat.png
+    - assets/icons/drugs.png
+    - assets/icons/eye-open.png
+    - assets/icons/heart.png
+    - assets/icons/medical.png
+    - assets/icons/molar.png
+    - assets/icons/down-arrow.png
+    - assets/icons/like.png
+    - assets/icons/message.png
+    - assets/icons/up-arrow.png
+    - assets/icons/medicalw.png
+    - assets/icons/video-camera.png
+    - assets/images/img.jpg
+    - assets/images/sdf.jpg
+    - assets/images/ddf.png
+    - assets/icons/add-pic.png
+    # - assets/images/michael_obeng.png
+    - assets/images/firstimg.webp
+    - assets/images/secondimg.jpg
+    - assets/images/third.jpg
+    - assets/images/fourthimg.jpg
+    - assets/images/sixthimg.jpg
+    - assets/images/seventhimg.jpg
+    - assets/images/ninthimg.jpg
+    - assets/images/bgimg1.jpg
+    - assets/images/bgimg2.webp
+    - assets/images/bgimg3.jpg
+    - assets/images/bgimg4.jpg
+    - assets/images/bgimg5.jpg
+    - assets/images/bgimg6.jpg
+    - assets/images/bgimg7.jpg
+    - assets/images/bgimg8.jpg
+    - assets/login_icon/timg.jpeg
+    - assets/login_icon/adimg.jpeg
+    - assets/login_icon/lo.jpg
+    - assets/login_icon/fit.jpg
+    - assets/login_icon/Capt.jpg
+    - assets/login_icon/18083.png
+    - assets/login_icon/45.png
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
