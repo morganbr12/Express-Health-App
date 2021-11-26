@@ -11,6 +11,7 @@ class NewChatScreen extends StatelessWidget {
     final String title = 'New Chat';
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         title: Text(
           title,
           style: TextStyle(
@@ -20,9 +21,35 @@ class NewChatScreen extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          Container(
-            margin: const EdgeInsets.all(10),
-            child: ChatSearchBar(),
+        Container(
+        alignment: Alignment.center,
+        child: Container(
+          width: 380,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(50),
+            border: Border.all(
+              width: 1,
+              color: Theme.of(context).primaryColor,
+              style: BorderStyle.solid,
+            ),
+          ),
+          child: TextField(
+            decoration: const InputDecoration(
+              contentPadding: EdgeInsets.all(10),
+              border: InputBorder.none,
+              hintText: 'search drug/pharmacy',
+              alignLabelWithHint: true,
+              hintStyle: TextStyle(
+                  color: Color.fromRGBO(39, 169, 208, 0.4),
+                  fontSize: 13
+              ),
+            ),
+            onChanged: (value) {},
+          ),
+        ),
+      ),
+          SizedBox(
+            height: 30,
           ),
           NewChatLook(),
         ],

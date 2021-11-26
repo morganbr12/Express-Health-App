@@ -49,7 +49,7 @@ class ScheduleDateTimeWithDoc extends StatelessWidget {
                                 Theme.of(context).primaryColor.withOpacity(0.2),
                             child: Image.asset(
                               'assets/images/sdf.jpg',
-                              centerSlice: Rect.largest,
+                              fit: BoxFit.cover,
                             ),
                           ),
                         ),

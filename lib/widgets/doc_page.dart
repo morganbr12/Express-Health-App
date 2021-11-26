@@ -57,7 +57,10 @@ class DoctorsPageWidget extends StatelessWidget {
                 children: [
                   Stack(
                     alignment: AlignmentGeometry.lerp(
-                        Alignment.center, Alignment.bottomCenter, 10),
+                        Alignment.center,
+                        Alignment.bottomCenter,
+                        10,
+                    ),
                     children: [
                       Container(
                         // decoration: BoxDecoration(
@@ -70,7 +73,7 @@ class DoctorsPageWidget extends StatelessWidget {
                           child: Image.asset(
                             backgroundImageUrl,
                             // fit: BoxFit.cover,
-                            centerSlice: Rect.largest,
+                            fit: BoxFit.cover,
                           ),
                         ),
                       ),
@@ -85,7 +88,7 @@ class DoctorsPageWidget extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15),
                           child: Image.asset(
                             imageUrl,
-                            centerSlice: Rect.largest,
+                            fit: BoxFit.cover,
                           ),
                         ),
                       )

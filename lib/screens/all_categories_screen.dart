@@ -7,6 +7,7 @@ class AllCategoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         title: Text('All categories'),
       ),
       body: Center(child: Text('All Cate'),),

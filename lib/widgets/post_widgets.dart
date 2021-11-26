@@ -68,7 +68,7 @@ class _PostAboutHealthState extends State<PostAboutHealth> {
                           borderRadius: BorderRadius.circular(15),
                           child: Image.asset(
                             widget.imageUrl,
-                            centerSlice: Rect.largest,
+                            fit: BoxFit.cover,
                           ),
                         ),
                       ),

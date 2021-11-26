@@ -8,6 +8,7 @@ class TopDoctorsRange extends StatelessWidget {
     //final topDocArgs = Modal
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         title: Text('Top Doctors'),
       ),
       body: Center(

@@ -1,6 +1,8 @@
 import 'dart:ui';
 
+import 'package:expresshealth/models/strings.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 import '../widgets/login.dart';
@@ -10,73 +12,71 @@ class LoginSignUpPage extends StatelessWidget {
   const LoginSignUpPage({Key key}) : super(key: key);
 
   void signUpPage(BuildContext ctx) {
-    Navigator.of(ctx).pushReplacement(MaterialPageRoute(builder: (_) => SignUpScreenPage()),
-    );
+    Navigator.of(ctx).pushReplacementNamed('/signup_page');
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: Colors.black87,
-        body: Stack(
-            children:[
-              Container(
-                width: double.maxFinite,
-                height: double.maxFinite,
-                child: Image.asset(
-                  "assets/login_icon/45.png",
-                  colorBlendMode: BlendMode.color,
-                  centerSlice: Rect.largest,
-                  filterQuality: FilterQuality.high,
-                )
-              ),
-              Positioned.fill(
-                child: BackdropFilter(
-                filter: ImageFilter.blur(
-                    sigmaX: 5,
-                    sigmaY: 5,
+        body: SafeArea(
+          top: false,
+          bottom: false,
+          child: Stack(
+              children:[
+                Container(
+                  width: double.maxFinite,
+                  height: double.infinity,
+                  child: Image.asset(
+                    "assets/images/BG1.png",
+                    colorBlendMode: BlendMode.color,
+                    fit: BoxFit.cover,
+                    filterQuality: FilterQuality.high,
+                  )
                 ),
-                  child: Container(
-                  color: Color.fromRGBO(0, 0, 0, 0.5),
-                  ),
+                // Container(
+                //   decoration: BoxDecoration(
+                //       gradient: LinearGradient(
+                //           colors: [
+                //             Color.fromRGBO(0, 0, 0, 0.6),
+                //             Color.fromRGBO(0, 0, 0, 0.7),
+                //           ]
+                //       )
+                //   ),
+                // ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.only(
+                        bottom: 0,
+                        right: 20,
+                        left: 0,
+                        top: 80,),
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                            Theme.of(context).primaryColor,
+                          ),
+                        ),
+                        onPressed: () => signUpPage(context),
+                        child: Text(
+                          'Create Account',
+                          style: boldWhite
+                          )
+                          ),
+                        ),
+                  ],
                 ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Container(
-                    margin: const EdgeInsets.only(
-                      bottom: 0,
-                      right: 20,
-                      left: 0,
-                      top: 80,),
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(
-                          Theme.of(context).primaryColor,
-                        ),
-                      ),
-                      onPressed: () => signUpPage(context),
-                      child: Text(
-                        'Create Account',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
-                            color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                Login(),
-                ],
-              ),
-            ],
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                  Login(),
+                  ],
+                ),
+              ],
+          ),
         ),
     );
   }

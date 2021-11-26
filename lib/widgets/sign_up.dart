@@ -1,3 +1,4 @@
+import 'package:expresshealth/models/strings.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatelessWidget {
@@ -36,6 +37,19 @@ class SignUp extends StatelessWidget {
                     width: MediaQuery.of(context).size.width * 0.37,
                       child: TextField(
                         cursorColor: Colors.white,
+                        style: normalWhite,
+                        textAlignVertical: TextAlignVertical.bottom,
+                        autofocus: true,
+                        showCursor: true,
+                        decoration: InputDecoration(
+                        //  errorBorder: (borderSide: BorderSide(color: Colors.red)),
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.white),
+                          ),
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.white),
+                          ),
+                        ),
                       ),
                   ),
                 ],
@@ -55,6 +69,19 @@ class SignUp extends StatelessWidget {
                       width: MediaQuery.of(context).size.width * 0.37,
                       child: TextField(
                         cursorColor: Colors.white,
+                        style: normalWhite,
+                        textAlignVertical: TextAlignVertical.bottom,
+                        autofocus: true,
+                        showCursor: true,
+                        decoration: InputDecoration(
+                          //  errorBorder: (borderSide: BorderSide(color: Colors.red)),
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.white),
+                          ),
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.white),
+                          ),
+                        ),
                       ),
                     ),
                   ],
@@ -84,19 +111,47 @@ class SignUp extends StatelessWidget {
                 width: MediaQuery.of(context).size.width * 0.3,
                 child: TextField(
                   cursorColor: Colors.white,
+                  style: normalWhite,
+                  textAlignVertical: TextAlignVertical.bottom,
+                  autofocus: true,
+                  showCursor: true,
                   decoration: InputDecoration(
-                      prefixIcon: Icon(
-                        Icons.keyboard_arrow_down,
-                        color: Colors.white,
-                      ),
+                    prefixIcon: IconButton(
+                        onPressed: () {},
+                      icon: Icon(Icons.keyboard_arrow_down_outlined),
+                      color: Colors.white,
+                    ),
+                    //  errorBorder: (borderSide: BorderSide(color: Colors.red)),
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white),
+                    ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white),
                     ),
                   ),
                 ),
+              ),
               Container(
                 width: MediaQuery.of(context).size.width * 0.45,
                 margin: EdgeInsets.only(left: 30),
-                child: TextField(
-                  cursorColor: Colors.white,
+                child:Container(
+                  width: MediaQuery.of(context).size.width * 0.41,
+                  child: TextField(
+                    cursorColor: Colors.white,
+                    style: normalWhite,
+                    textAlignVertical: TextAlignVertical.bottom,
+                    autofocus: true,
+                    showCursor: true,
+                    decoration: InputDecoration(
+                      //  errorBorder: (borderSide: BorderSide(color: Colors.red)),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ],

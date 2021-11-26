@@ -81,6 +81,7 @@ class _EHHomePageScreenState extends State<EHHomePageScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
+        elevation: 0,
         title: _title,
         leading: Builder(builder: (context) {
           return InkWell(
@@ -125,7 +126,7 @@ class _EHHomePageScreenState extends State<EHHomePageScreen> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Theme.of(context).primaryColor,
-        unselectedItemColor: Colors.grey,
+        unselectedItemColor: Colors.black,
         onTap: _onItemTap,
         currentIndex: _currentIndex,
         showUnselectedLabels: true,
@@ -140,9 +141,9 @@ class _EHHomePageScreenState extends State<EHHomePageScreen> {
           ),
           BottomNavigationBarItem(
             icon: Image.asset(
-              'assets/icons/drugs.png',
+              'assets/icons/drug1.png',
               height: 16,
-              color: Colors.grey,
+              // color: Colors.grey,
             ),
             label: 'Pharmacy',
           ),

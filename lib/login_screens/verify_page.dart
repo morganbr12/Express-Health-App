@@ -18,40 +18,40 @@ class VerifyPage extends StatelessWidget {
           Container(
               height: double.maxFinite,
               width: double.maxFinite,
-              child: Image.asset("assets/login_icon/45.png",
+              child: Image.asset("assets/images/BG1.png",
                 colorBlendMode: BlendMode.color,
                 // fit: BoxFit.fitHeight,
                 centerSlice: Rect.largest,
-                filterQuality: FilterQuality.high,
+                // filterQuality: FilterQuality.high,
               )
           ),
-          Positioned.fill(child: BackdropFilter(
-            filter: ImageFilter.blur(
-                sigmaX: 5,
-                sigmaY: 5),
-            child: Container(
-              color: Color.fromRGBO(0, 0, 0, 0.5),
-              ),
-            ),
-          ),
+          // Positioned.fill(child: BackdropFilter(
+          //   filter: ImageFilter.blur(
+          //       sigmaX: 5,
+          //       sigmaY: 5),
+          //   child: Container(
+          //     color: Color.fromRGBO(0, 0, 0, 0.5),
+          //     ),
+          //   ),
+          // ),
           Row(
             children: [
               InkWell(
                 onTap: () => backLogin(context),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.white54,
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(10)
                   ),
-                  width: 50,
-                  height: 50,
+                  width: 30,
+                  height: 30,
                   margin: const EdgeInsets.only(
                     top: 70,
                     left: 20,
                   ),
                   child: Icon(
                     Icons.arrow_back_ios_sharp,
-                    size: 30,
+                    size: 25,
                   ),
                 ),
               )

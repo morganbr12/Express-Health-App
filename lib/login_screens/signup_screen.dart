@@ -9,10 +9,8 @@ class SignUpScreenPage extends StatelessWidget {
   const SignUpScreenPage({Key key}) : super(key: key);
 
   void signInPage(BuildContext ctx) {
-    Navigator.of(ctx).pushReplacement(
-      MaterialPageRoute(
-          builder: (_) => LoginSignUpPage(),
-      ),
+    Navigator.of(ctx).popAndPushNamed(
+      '/login_signUp'
     );
   }
 
@@ -24,22 +22,29 @@ class SignUpScreenPage extends StatelessWidget {
           Container(
             width: double.maxFinite,
               height: double.maxFinite,
-              child: Image.asset("assets/login_icon/45.png",
+              child: Image.asset("assets/images/BG1.png",
                 colorBlendMode: BlendMode.color,
                 // fit: BoxFit.fitHeight,
                 centerSlice: Rect.largest,
-                filterQuality: FilterQuality.high,
+                // filterQuality: FilterQuality.high,
               )
           ),
-          Positioned.fill(child: BackdropFilter(
-            filter: ImageFilter.blur(
-                sigmaX: 5,
-                sigmaY: 5),
-            child: Container(
-              color: Color.fromRGBO(0, 0, 0, 0.5),
-            ),
-          ),
-          ),
+          // Positioned.fill(child: BackdropFilter(
+          //   filter: ImageFilter.blur(
+          //       sigmaX: 3,
+          //       sigmaY: 3),
+          //   child: Container(
+          //     decoration: BoxDecoration(
+          //       gradient: LinearGradient(
+          //         colors: [
+          //           Color.fromRGBO(0, 0, 0, -0.25),
+          //           Color.fromRGBO(0, 0, 0, 0.7)
+          //         ]
+          //       )
+          //     ),
+          //   ),
+          // ),
+          // ),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [

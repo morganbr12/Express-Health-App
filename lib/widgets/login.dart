@@ -1,3 +1,4 @@
+import 'package:expresshealth/models/strings.dart';
 import 'package:flutter/material.dart';
 
 
@@ -25,11 +26,7 @@ class Login extends StatelessWidget {
                   margin: EdgeInsets.only(bottom: 70),
                   child: Text(
                     'Sign In',
-                    style: TextStyle(
-                      fontSize: 47,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                  ),
+                    style: titleWhite
                   ),
                 ),
               Column(
@@ -37,15 +34,18 @@ class Login extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Container(
-                        margin: EdgeInsets.only(left: 40, bottom: 30),
-                        child: Text('Enter Phone Number',
-                          style: TextStyle(
-                              color: Colors.white,
-                            fontSize: 18
+                      Theme(
+                        data: ThemeData(
+                            brightness: Brightness.light
+                        ),
+                        child: Container(
+                          margin: EdgeInsets.only(left: 40, bottom: 30),
+                          child: Text(
+                            'Enter Phone Number',
+                            style: normalWhite
                           ),
                         ),
-                      ),
+                      )
                     ],
                   ),
                   Row(
@@ -61,20 +61,28 @@ class Login extends StatelessWidget {
                                 width: MediaQuery.of(context).size.width * 0.3,
                                 height: 40,
                                 // margin: EdgeInsets.only(top: 100),
-                                child: TextField(
-                                  onTap: () {},
-                                  decoration: InputDecoration(
-                                    border: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color: Colors.white,
-                                      )
-                                    ),
-                                      prefixIcon: Icon(
-                                          Icons.keyboard_arrow_down,
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width * 0.37,
+                                  child: TextField(
+                                    cursorColor: Colors.white,
+                                    style: normalWhite,
+                                    textAlignVertical: TextAlignVertical.bottom,
+                                    autofocus: true,
+                                    showCursor: true,
+                                    decoration: InputDecoration(
+                                      prefixIcon: IconButton(
+                                        onPressed: () {},
+                                        icon: Icon(Icons.keyboard_arrow_down_outlined),
                                         color: Colors.white,
                                       ),
-                                    // focusedBorder: InputD()
-                                    // prefixIcon: Icons,
+                                      //  errorBorder: (borderSide: BorderSide(color: Colors.red)),
+                                      enabledBorder: UnderlineInputBorder(
+                                        borderSide: BorderSide(color: Colors.white),
+                                      ),
+                                      focusedBorder: UnderlineInputBorder(
+                                        borderSide: BorderSide(color: Colors.white),
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
@@ -82,12 +90,25 @@ class Login extends StatelessWidget {
                                 width: MediaQuery.of(context).size.width * 0.45,
                                 height: 40,
                                 margin: EdgeInsets.only( left: 18),
-                                child: TextField(
-                                    onTap: () {},
+                               // padding: const EdgeInsets.only(top: 0, left: 10, bottom: 5),
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width * 0.37,
+                                  child: TextField(
+                                    cursorColor: Colors.white,
+                                    style: normalWhite,
+                                    textAlignVertical: TextAlignVertical.bottom,
+                                    autofocus: true,
+                                    showCursor: true,
                                     decoration: InputDecoration(
-                                      border: OutlineInputBorder(),
-                                    )
-                                  // prefixIcon: Icons,
+                                      //  errorBorder: (borderSide: BorderSide(color: Colors.red)),
+                                      enabledBorder: UnderlineInputBorder(
+                                        borderSide: BorderSide(color: Colors.white),
+                                      ),
+                                      focusedBorder: UnderlineInputBorder(
+                                        borderSide: BorderSide(color: Colors.white),
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ],

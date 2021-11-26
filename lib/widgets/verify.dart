@@ -1,3 +1,4 @@
+import 'package:expresshealth/models/strings.dart';
 import 'package:flutter/material.dart';
 
 import '../screens/home_page_screen.dart';
@@ -17,6 +18,7 @@ class Verify extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
           margin: EdgeInsets.only(bottom: 70),
@@ -39,40 +41,122 @@ class Verify extends StatelessWidget {
           ),
         ),
         Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               width: 70,
-                child: TextField(
-                  textAlign: TextAlign.center,
-                  cursorColor: Colors.white,
-                  decoration: InputDecoration(
-
+                child:Container(
+                  width: MediaQuery.of(context).size.width * 0.3,
+                  height: 40,
+                  // margin: EdgeInsets.only(top: 100),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * 0.37,
+                    child: TextField(
+                      cursorColor: Colors.white,
+                      style: normalWhite,
+                      textAlignVertical: TextAlignVertical.bottom,
+                      autofocus: true,
+                      showCursor: true,
+                      textAlign: TextAlign.center,
+                      decoration: InputDecoration(
+                        //  errorBorder: (borderSide: BorderSide(color: Colors.red)),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+            ),
+            Container(
+              margin: EdgeInsets.all(15),
+                width: 70,
+                child: Container(
+                  width: MediaQuery.of(context).size.width * 0.3,
+                  height: 40,
+                  // margin: EdgeInsets.only(top: 100),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * 0.37,
+                    child: TextField(
+                      cursorColor: Colors.white,
+                      style: normalWhite,
+                      textAlignVertical: TextAlignVertical.bottom,
+                      autofocus: true,
+                      showCursor: true,
+                      textAlign: TextAlign.center,
+                      decoration: InputDecoration(
+                        //  errorBorder: (borderSide: BorderSide(color: Colors.red)),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
             ),
             Container(
               margin: EdgeInsets.all(15),
-                width: 70,
-                child: TextField(
-                  textAlign: TextAlign.center,
-                  cursorColor: Colors.white,
-                ),
-            ),
-            Container(
-              margin: EdgeInsets.all(15),
               width: 70,
-              child: TextField(
-                textAlign: TextAlign.center,
-                cursorColor: Colors.white,
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.3,
+                height: 40,
+                // margin: EdgeInsets.only(top: 100),
+                child: Container(
+                  width: MediaQuery.of(context).size.width * 0.37,
+                  child: TextField(
+                    cursorColor: Colors.white,
+                    style: normalWhite,
+                    textAlignVertical: TextAlignVertical.bottom,
+                    autofocus: true,
+                    showCursor: true,
+                    textAlign: TextAlign.center,
+                    decoration: InputDecoration(
+                      //  errorBorder: (borderSide: BorderSide(color: Colors.red)),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ),
               ),
             ),
             Container(
               margin: EdgeInsets.all(15),
               width: 70,
-              child: TextField(
-                textAlign: TextAlign.center,
-                cursorColor: Colors.white,
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.3,
+                height: 40,
+                // margin: EdgeInsets.only(top: 100),
+                child: Container(
+                  width: MediaQuery.of(context).size.width * 0.37,
+                  child: TextField(
+                    cursorColor: Colors.white,
+                    style: normalWhite,
+                    textAlignVertical: TextAlignVertical.bottom,
+                    autofocus: true,
+                    showCursor: true,
+                    textAlign: TextAlign.center,
+                    decoration: InputDecoration(
+                      //  errorBorder: (borderSide: BorderSide(color: Colors.red)),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ),
               ),
             ),
           ],

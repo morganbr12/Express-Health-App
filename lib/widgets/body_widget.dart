@@ -25,17 +25,38 @@ class HomeScreenBodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(2),
+      padding: const EdgeInsets.all(1),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(
-            height: 1,
-          ),
           Container(
-            height: MediaQuery.of(context).size.height * 0.1,
-              child: HomeSearchBar(),
+            alignment: Alignment.center,
+            child: Container(
+              width: 380,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                border: Border.all(
+                  width: 1,
+                  color: Theme.of(context).primaryColor,
+                  style: BorderStyle.solid,
+                ),
+              ),
+              child: TextField(
+                decoration: const InputDecoration(
+                  contentPadding: EdgeInsets.all(10),
+                  border: InputBorder.none,
+                  hintText: 'how is your health?',
+                  alignLabelWithHint: true,
+                  hintStyle: TextStyle(
+                      color: Color.fromRGBO(39, 169, 208, 0.4),
+                      fontSize: 13,
+                    letterSpacing: 1.0
+                  ),
+                ),
+                onChanged: (value) {},
+              ),
+            ),
           ),
           Column(
             children: [

@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
 
-class ChatPlaceScreen extends StatelessWidget {
+class ChatPlaceScreen extends StatefulWidget {
   ChatPlaceScreen({Key key}) : super(key: key);
 
   @override
+  State<ChatPlaceScreen> createState() => _ChatPlaceScreenState();
+}
+
+class _ChatPlaceScreenState extends State<ChatPlaceScreen> {
+  @override
   Widget build(BuildContext context) {
+    final information = ModalRoute.of(context).settings.arguments as Map<String, Object>;
+    final userName = information['userName'];
+    final userImageUrl = information['userImageUrl'];
+    final occupation = information['occupation'];
+
     final title = Container(
       child: Row(
         children: [
@@ -23,7 +33,7 @@ class ChatPlaceScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Joshua Nii Men...',
+                  userName!=null? userName: 'default',
                   style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
@@ -33,7 +43,7 @@ class ChatPlaceScreen extends StatelessWidget {
                 Text(
                   'Dentist',
                   style: TextStyle(
-                    fontSize: 15,
+                    fontSize: 13,
                     fontWeight: FontWeight.bold,
                     color: Theme.of(context).accentColor,
                   ),
@@ -47,6 +57,7 @@ class ChatPlaceScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         title: title,
         actions: [
           GestureDetector(

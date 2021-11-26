@@ -4,28 +4,39 @@ import '../screens/appointment_screen.dart';
 
 class UsersProfilePageScreen extends StatelessWidget {
   // final String id;
-  // final String userName;
-  // final String userImageUrl;
-  // final String occupation;
+  final String userName;
+  final String userImageUrl;
+  final String occupation;
   // final String hospital;
   // final String location;
   // final String date;
   //
-  // const UsersProfilePageScreen({
+  UsersProfilePageScreen({
   //   @required this.id,
-  //   @required this.userName,
-  //   @required this.userImageUrl,
-  //   @required this.occupation,
+    @required this.userName,
+   @required this.userImageUrl,
+   @required this.occupation,
   //   @required this.hospital,
   //   @required this.location,
   //   @required this.date,
-  // });
+   });
 
   void selectAppointment(BuildContext ctx) {
     Navigator.of(ctx).push(
       MaterialPageRoute(
         builder: (ctx) => PageScreenAppointment(''),
       ),
+    );
+  }
+
+  void toChatPage(BuildContext ctx) {
+    Navigator.of(ctx).pushNamed(
+      '/chat_screen',
+      arguments: {
+        'userName': userName,
+        'userImageUrl': userImageUrl,
+        'occupation': occupation,
+      }
     );
   }
 
@@ -73,7 +84,7 @@ class UsersProfilePageScreen extends StatelessWidget {
                         ),
                         child: Image.asset(
                           userBackgroundImage,
-                          centerSlice: Rect.largest,
+                          fit: BoxFit.cover,
                           height: 250,
                         ),
                       ),
@@ -94,7 +105,7 @@ class UsersProfilePageScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                         child: Image.asset(
                           userImage,
-                          centerSlice: Rect.largest,
+                          fit: BoxFit.cover,
                         ),
                       ),
                     ),
@@ -108,9 +119,18 @@ class UsersProfilePageScreen extends StatelessWidget {
                     Text(
                       userName,
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                          TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                          ),
                     ),
-                    Text(userOccupation),
+                    Text(userOccupation,
+                      style:
+                      TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 13,
+                      ),
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -148,7 +168,7 @@ class UsersProfilePageScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(12.0),
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () => toChatPage(context),
                       borderRadius: BorderRadius.circular(20),
                       child: Image.asset(
                         'assets/icons/chat.png',

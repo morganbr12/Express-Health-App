@@ -67,7 +67,7 @@ class TopDoctorsRated extends StatelessWidget {
                     // color: Colors.grey.withOpacity(0.3),
                     child: Image.asset(
                       imageUrl,
-                      centerSlice: Rect.largest,
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),

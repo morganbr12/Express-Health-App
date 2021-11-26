@@ -17,6 +17,8 @@ import './screens/new_chat_screen.dart';
 import './screens/chat_place_screen.dart';
 import './login_screens/Login_signUp.dart';
 import './login_screens/verify_page.dart';
+import './splashscreen/splashscreen.dart';
+import './login_screens/signup_screen.dart';
 
 
 
@@ -37,7 +39,7 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.white.withOpacity(0.99),
         primaryColor: Color.fromRGBO(19, 169, 214, 1),
         accentColor: Colors.black,
-        fontFamily: "Neva",
+        // brightness: Brightness.light,
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.white,
           elevation: 1.0,
@@ -60,8 +62,9 @@ class HomePage extends StatelessWidget {
             ),
       ),
       // home: EHHomePageScreen(),
-      initialRoute: '/login_signUp',
+      initialRoute: '/splash',
       routes: {
+        '/splash': (ctx) => SplashScreen(),
         '/verify': (ctx) => VerifyPage(),
         '/login_signUp': (ctx) => LoginSignUpPage(),
         '/': (ctx) => EHHomePageScreen(),

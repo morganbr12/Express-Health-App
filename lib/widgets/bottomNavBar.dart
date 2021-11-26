@@ -7,19 +7,19 @@ class DrawerWidget extends StatelessWidget {
   }) : super(key: key);
 
   void selectCircleAvatar(BuildContext ctx) {
-    Navigator.of(ctx).pushNamed('/user_info_page');
+    Navigator.of(ctx).popAndPushNamed('/user_info_page');
   }
 
   void selectSettingsPage(BuildContext ctx) {
-    Navigator.of(ctx).pushNamed('/settings_screen');
+    Navigator.of(ctx).popAndPushNamed('/settings_screen');
   }
 
   void selectHelp(BuildContext ctx) {
-    Navigator.of(ctx).pushNamed('/help_screen');
+    Navigator.of(ctx).popAndPushNamed('/help_screen');
   }
 
   void selectSubscription(BuildContext ctx) {
-    Navigator.of(ctx).pushNamed('/subscription');
+    Navigator.of(ctx).popAndPushNamed('/subscription');
   }
 
   @override

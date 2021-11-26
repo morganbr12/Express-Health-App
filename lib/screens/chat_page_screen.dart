@@ -18,6 +18,7 @@ class ChatHomePageScreen extends StatelessWidget {
     final title = 'Chat';
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         title: Text(
           title,
           style: TextStyle(

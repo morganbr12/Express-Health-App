@@ -43,7 +43,7 @@ class _NewPostState extends State<NewPost> {
                   borderRadius: BorderRadius.circular(50),
                   child: Image.asset(
                     'assets/images/secondimg.jpg',
-                    centerSlice: Rect.largest,
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),

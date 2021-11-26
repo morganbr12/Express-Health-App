@@ -36,17 +36,29 @@ class NewChatLook extends StatelessWidget {
                     children: [
                       Text(
                         'Joshua Nii Mensah',
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 4,
                       ),
                       Text(
                         'Dentist',
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 12,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 4,
                       ),
                       Text(
                         'Cross Guild Herbal',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 14,
+                          fontSize: 12,
                           color: Theme.of(context).primaryColor,
                         ),
                       ),
