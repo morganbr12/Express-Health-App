@@ -13,13 +13,13 @@ class HelpScreenPage extends StatefulWidget {
 }
 
 class _HelpScreenPageState extends State<HelpScreenPage> {
-  int _currentState = 0;
-
-  void _onTapNav(int index) {
-    setState(() {
-      _currentState = index;
-    });
-  }
+  // int _currentState = 0;
+  //
+  // void _onTapNav(int index) {
+  //   setState(() {
+  //     _currentState = index;
+  //   });
+  // }
 
   final _changes = [
     CallUs(),
@@ -32,8 +32,6 @@ class _HelpScreenPageState extends State<HelpScreenPage> {
 
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        titleTextStyle: TextStyle(color: Colors.black),
         title: title,
       ),
       body: Container(

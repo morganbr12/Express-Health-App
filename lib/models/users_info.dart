@@ -14,6 +14,7 @@ class UsersFullDetails {
   final String rated;
   final int telephoneNumber;
   final String text;
+  final DateTime date;
   // final DateTime date;
 
   const UsersFullDetails({
@@ -22,14 +23,15 @@ class UsersFullDetails {
     @required this.age,
     @required this.occupation,
     @required this.imageUrl,
-    @required this.backgroundImageUrl,
+    this.backgroundImageUrl,
     @required this.hospital,
-    @required this.location,
-    @required this.isAvailable,
-    @required this.isIdentityCardAuth,
+    this.location,
+    this.isAvailable,
+    this.isIdentityCardAuth,
     @required this.rated,
     @required this.telephoneNumber,
     // this.date,
-    this.text
+    this.text,
+    this.date,
   });
 }

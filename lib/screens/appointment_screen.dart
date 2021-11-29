@@ -20,28 +20,22 @@ class PageScreenAppointment extends StatelessWidget {
         children: [
           Row(
             children: [
-              // Container(
-              //   height: 125,
-              //   width: 150,
-              //   margin: const EdgeInsets.all(15),
-              //   child: Card(
-              //     elevation: 3,
-              //     margin: const EdgeInsets.all(15),
-              //     shape: RoundedRectangleBorder(
-              //       borderRadius: BorderRadius.circular(15),
-              //     ),
-              //     child: ClipRRect(
-              //       borderRadius: BorderRadius.circular(14),
-              //       child: Image.asset(
-              //         userImageUrl,
-              //         centerSlice: Rect.largest,
-              //       ),
-              //     ),
-              //   ),
-              // ),
+
             ],
           ),
           ChooseOnlineOrHospital(),
+          Row(
+            children: [
+              IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.keyboard_arrow_down,
+                  size: 40,
+                ),
+              ),
+              Text('July')
+            ],
+          )
         ],
       ),
     );

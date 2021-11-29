@@ -147,7 +147,7 @@ class HomeScreenBodyWidget extends StatelessWidget {
                           backgroundImageUrl: catRated.backgroundImageUrl,
                           location: catRated.location,
                           hospital: catRated.hospital,
-                          rated: catRated.rated,
+                          rated: catRated.rated.toString(),
                           occupation: catRated.occupation,
                         ),
                       )

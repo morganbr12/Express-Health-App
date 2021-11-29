@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "789320914674",
+    "project_id": "expresshealth-app",
+    "storage_bucket": "expresshealth-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789320914674:android:df0ee7511bf1851487626b",
+        "android_client_info": {
+          "package_name": "com.dalysttek.expresshealth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "789320914674-r48m2cua6ikuhqin2rlhduhgmiq0ksgk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dalysttek.expresshealth",
+            "certificate_hash": "1117c7f3890db9878deb7b354d37f470090cd231"
+          }
+        },
+        {
+          "client_id": "789320914674-qjoto4ul9nrd74178nhf210f1vbfqech.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA81n6BP71-YB_0QLBJdyVuWqunLfbPTM8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "789320914674-qjoto4ul9nrd74178nhf210f1vbfqech.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

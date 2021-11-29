@@ -53,29 +53,23 @@ class UsersProfilePageScreen extends StatelessWidget {
     final userWorkedHospital = routesUserInfo['hospital'];
 
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 33,
-      ),
+      // appBar: AppBar(
+      //   toolbarHeight: 33,
+      // ),
       body: ListView(
         children: [
           Column(
+            // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Stack(
                 alignment: AlignmentDirectional.lerp(
                     AlignmentDirectional.center,
                     AlignmentDirectional.bottomCenter,
-                    3),
+                    1.7),
                 children: [
-                  Card(
-                    elevation: 1,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(30),
-                        bottomRight: Radius.circular(30),
-                      ),
-                    ),
-                    child: Container(
-                      height: 250,
+                  Stack(
+                    children: [Container(
+                      height: 300,
                       width: double.infinity,
                       child: ClipRRect(
                         borderRadius: BorderRadius.only(
@@ -85,11 +79,23 @@ class UsersProfilePageScreen extends StatelessWidget {
                         child: Image.asset(
                           userBackgroundImage,
                           fit: BoxFit.cover,
-                          height: 250,
+                          height: 350,
                         ),
                       ),
                     ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          IconButton(onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                            icon: Icon(Icons.arrow_back_ios_new_sharp),
+                          ),
+                        ],
+                      ),
+                  ]
                   ),
+
                   Card(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -281,10 +287,23 @@ class UsersProfilePageScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text('Availability'),
-                  Text(
-                    'Mon - Fri: 9:30-18:00',
-                    style: TextStyle(color: Colors.grey),
+                  Container(
+                    width: double.maxFinite,
+                      margin: const EdgeInsets.only(left: 15),
+                      child: Text('Availability',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                  ),
+                  Container(
+                    width: double.maxFinite,
+                    margin: const EdgeInsets.only(left: 15, top: 5),
+                    child: Text(
+                      'Mon - Fri: 9:30-18:00',
+                      style: TextStyle(color: Colors.grey),
+                    ),
                   ),
                 ],
               ),

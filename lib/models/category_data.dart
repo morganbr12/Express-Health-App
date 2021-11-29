@@ -78,7 +78,7 @@ const DUMMY_INFORMATION = const [
     location: "New York",
     isAvailable: true,
     isIdentityCardAuth: true,
-    rated: 'true',
+    rated:' true',
     telephoneNumber: 055805023,
   ),
   UsersFullDetails(
@@ -193,7 +193,7 @@ const DUMMY_INFORMATION = const [
   // ),
 ];
 
-const NewPostData = const [
+final NewPostData = [
   UsersFullDetails(
     id: 't1',
     name: 'Dr. james Abrokwah',
@@ -205,7 +205,7 @@ const NewPostData = const [
     location: 'Cantonment Ln, Ghana',
     isAvailable: true,
     isIdentityCardAuth: true,
-    rated: 'Yes',
+    rated: 'true',
     telephoneNumber: 1234567890,
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam laoreet, tellus vitae egestas imperdiet, elit elit cursus ante, in rutrum est nisl a leo. Curabitur ligula turpis, iaculis ac aliquet at, dapibus ut tortor. Integer tincidunt, nulla vitae tempor mattis, nisl lectus tristique magna, nec volutpat magna odio eu magna. Cras aliquet rutrum libero ut placerat..'
   ),
@@ -220,7 +220,7 @@ const NewPostData = const [
       location: 'Kumasi Adum, Ghana',
       isAvailable: true,
       isIdentityCardAuth: true,
-      rated: 'Yes',
+      rated: 'true',
       telephoneNumber: 1234567890,
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam laoreet, tellus vitae egestas imperdiet, elit elit cursus ante, in rutrum est nisl a leo. Curabitur ligula turpis, iaculis ac aliquet at, dapibus ut tortor. Integer tincidunt, nulla vitae tempor mattis, nisl lectus tristique magna, nec volutpat magna odio eu magna. Cras aliquet rutrum libero ut placerat..'
   ),

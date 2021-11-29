@@ -90,7 +90,8 @@ class DrawerWidget extends StatelessWidget {
                             ),
                             Padding(
                                 padding: EdgeInsets.only(right: 3),
-                                child: Text('Police Hospital,')),
+                                child: Text('Police Hospital,'),
+                            ),
                             Text(
                               'Cantonment',
                               style: TextStyle(
@@ -134,7 +135,11 @@ class DrawerWidget extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: ListTile(
                 onTap: () => selectSubscription(context),
-                leading: Text('Subscriptions'),
+                leading: Text('Subscriptions',
+                  style: TextStyle(
+                    color: Colors.black
+                  ),
+                ),
               ),
             ),
             SizedBox(

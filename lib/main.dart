@@ -40,9 +40,13 @@ class HomePage extends StatelessWidget {
         primaryColor: Color.fromRGBO(19, 169, 214, 1),
         accentColor: Colors.black,
         // brightness: Brightness.light,
+        fontFamily: 'Nexa',
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.white,
-          elevation: 1.0,
+          titleTextStyle: TextStyle(
+            color: Colors.black
+          ),
+          elevation: 0,
           iconTheme: IconThemeData(
             color: Colors.black
           ),
@@ -57,12 +61,12 @@ class HomePage extends StatelessWidget {
               ),
               headline6: TextStyle(
                 fontSize: 24,
-                fontFamily: "RobotoCondensed",
+                fontFamily: "Nexa",
               ),
             ),
       ),
       // home: EHHomePageScreen(),
-      initialRoute: '/splash',
+      initialRoute: '/login_signUp',
       routes: {
         '/splash': (ctx) => SplashScreen(),
         '/verify': (ctx) => VerifyPage(),

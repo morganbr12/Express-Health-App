@@ -66,9 +66,9 @@ class Login extends StatelessWidget {
                                   child: TextField(
                                     cursorColor: Colors.white,
                                     style: normalWhite,
-                                    textAlignVertical: TextAlignVertical.bottom,
-                                    autofocus: true,
-                                    showCursor: true,
+                                    // textAlignVertical: TextAlignVertical.bottom,
+                                    // autofocus: true,
+                                    // showCursor: true,
                                     decoration: InputDecoration(
                                       prefixIcon: IconButton(
                                         onPressed: () {},
@@ -96,9 +96,8 @@ class Login extends StatelessWidget {
                                   child: TextField(
                                     cursorColor: Colors.white,
                                     style: normalWhite,
-                                    textAlignVertical: TextAlignVertical.bottom,
-                                    autofocus: true,
-                                    showCursor: true,
+                                    // textAlignVertical: TextAlignVertical.bottom,
+                                    // showCursor: true,
                                     decoration: InputDecoration(
                                       //  errorBorder: (borderSide: BorderSide(color: Colors.red)),
                                       enabledBorder: UnderlineInputBorder(

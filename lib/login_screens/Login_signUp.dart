@@ -1,12 +1,11 @@
 import 'dart:ui';
 
-import 'package:expresshealth/models/strings.dart';
+
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 
 import '../widgets/login.dart';
-import '../login_screens/signup_screen.dart';
 
 class LoginSignUpPage extends StatelessWidget {
   const LoginSignUpPage({Key key}) : super(key: key);
@@ -44,6 +43,15 @@ class LoginSignUpPage extends StatelessWidget {
                 //       )
                 //   ),
                 // ),
+
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                  Login(),
+                  ],
+                ),
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -54,25 +62,18 @@ class LoginSignUpPage extends StatelessWidget {
                         left: 0,
                         top: 80,),
                       child: ElevatedButton(
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all<Color>(
-                            Theme.of(context).primaryColor,
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                              Theme.of(context).primaryColor,
+                            ),
                           ),
-                        ),
-                        onPressed: () => signUpPage(context),
-                        child: Text(
-                          'Create Account',
-                          style: boldWhite
+                          onPressed: () => signUpPage(context),
+                          child: Text(
+                              'Create Account',
+                              style: TextStyle(fontFamily: 'Nexa')
                           )
-                          ),
-                        ),
-                  ],
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                  Login(),
+                      ),
+                    ),
                   ],
                 ),
               ],

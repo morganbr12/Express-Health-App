@@ -1,12 +1,68 @@
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/search_bar_hm.dart';
-import '../widgets/post_widgets.dart';
-import '../widgets/new_post.dart';
-import '../models/category_data.dart';
 
-class CommunityDashboardScreen extends StatelessWidget {
-  const CommunityDashboardScreen({Key key}) : super(key: key);
+import '../widgets/new_post.dart';
+import '../widgets/newpost.dart';
+import '../widgets/post_widgets.dart';
+import '../models/category_data.dart';
+import '../models/category_data.dart';
+import '../models/users_info.dart';
+
+class CommunityDashboardScreen extends StatefulWidget {
+
+  const CommunityDashboardScreen(
+      {Key key}) : super(key: key);
+
+  @override
+  State<CommunityDashboardScreen> createState() => _CommunityDashboardScreenState();
+}
+
+class _CommunityDashboardScreenState extends State<CommunityDashboardScreen> {
+
+  void _addNewPost(String txContent, String name, int age,
+      String occupation, String imageUrl, String hospital,) {
+    final newContent = UsersFullDetails(
+      id: DateTime.now().toString(),
+      name: name,
+      age: age,
+      occupation: occupation,
+      imageUrl: imageUrl,
+      hospital: hospital,
+      rated: 'true',
+      telephoneNumber: 0244000000,
+      text: txContent,
+    );
+    setState(() {
+      NewPostData.add(newContent);
+    });
+  }
+
+  void startAddNewPost(BuildContext ctx) {
+    Navigator.of(ctx).push(
+        PageRouteBuilder(
+          transitionDuration: Duration(milliseconds: 200),
+          transitionsBuilder: (
+              BuildContext ctx,
+              Animation<double> animation,
+              Animation<double> secAnimation,
+              Widget child){
+            return ScaleTransition(
+              alignment: Alignment.bottomCenter,
+              scale: animation,
+              child: child,
+            );
+          },
+          pageBuilder: (
+              BuildContext ctx,
+              Animation<double> animation,
+              Animation<double> secAnimation){
+            return NewPost(_addNewPost);}
+        ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +102,6 @@ class CommunityDashboardScreen extends StatelessWidget {
                 ),
               ),
             ),
-            NewPost(),
             Column(
               children: [
                 Row(
@@ -89,7 +144,7 @@ class CommunityDashboardScreen extends StatelessWidget {
                     itemBuilder: (ctx, _) {
                       return Column(
                         children: NewPostData.map(
-                          (catNew) => PostAboutHealth(
+                              (catNew) => PostAboutHealth(
                             imageUrl: catNew.imageUrl,
                             name: catNew.name,
                             occupation: catNew.occupation,
@@ -102,7 +157,7 @@ class CommunityDashboardScreen extends StatelessWidget {
                     },
                     itemCount: NewPostData.length,
                   ),
-                )
+                ),
               ],
             ),
           ],
@@ -111,7 +166,7 @@ class CommunityDashboardScreen extends StatelessWidget {
       floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
       floatingActionButton: FloatingActionButton(
         backgroundColor: Theme.of(context).primaryColor.withOpacity(0.5),
-        onPressed: () {},
+        onPressed: () => startAddNewPost(context),
         child: Icon(Icons.add, size: 30,),
       ),
     );
