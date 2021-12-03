@@ -5,9 +5,14 @@ import 'package:flutter/material.dart';
 import '../login_screens/Login_signUp.dart';
 import '../widgets/sign_up.dart';
 
-class SignUpScreenPage extends StatelessWidget {
+class SignUpScreenPage extends StatefulWidget {
   const SignUpScreenPage({Key key}) : super(key: key);
 
+  @override
+  State<SignUpScreenPage> createState() => _SignUpScreenPageState();
+}
+
+class _SignUpScreenPageState extends State<SignUpScreenPage> {
   void signInPage(BuildContext ctx) {
     Navigator.of(ctx).popAndPushNamed(
       '/login_signUp'
@@ -16,35 +21,26 @@ class SignUpScreenPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
+
       body: Stack(
         children: [
+
+          // background image
           Container(
             width: double.maxFinite,
               height: double.maxFinite,
               child: Image.asset("assets/images/BG1.png",
-                colorBlendMode: BlendMode.color,
-                // fit: BoxFit.fitHeight,
-                centerSlice: Rect.largest,
+                // colorBlendMode: BlendMode.color,
+                fit: BoxFit.cover,
+                // centerSlice: Rect.largest,
                 // filterQuality: FilterQuality.high,
               )
           ),
-          // Positioned.fill(child: BackdropFilter(
-          //   filter: ImageFilter.blur(
-          //       sigmaX: 3,
-          //       sigmaY: 3),
-          //   child: Container(
-          //     decoration: BoxDecoration(
-          //       gradient: LinearGradient(
-          //         colors: [
-          //           Color.fromRGBO(0, 0, 0, -0.25),
-          //           Color.fromRGBO(0, 0, 0, 0.7)
-          //         ]
-          //       )
-          //     ),
-          //   ),
-          // ),
-          // ),
+
+
+          // back to SignIn page
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -73,6 +69,9 @@ class SignUpScreenPage extends StatelessWidget {
               ),
             ],
           ),
+
+
+          // SignUp fieldIn details
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,

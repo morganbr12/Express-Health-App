@@ -25,15 +25,7 @@ class VerifyPage extends StatelessWidget {
                 // filterQuality: FilterQuality.high,
               )
           ),
-          // Positioned.fill(child: BackdropFilter(
-          //   filter: ImageFilter.blur(
-          //       sigmaX: 5,
-          //       sigmaY: 5),
-          //   child: Container(
-          //     color: Color.fromRGBO(0, 0, 0, 0.5),
-          //     ),
-          //   ),
-          // ),
+
           Row(
             children: [
               InkWell(

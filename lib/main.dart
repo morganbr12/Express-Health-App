@@ -43,6 +43,7 @@ class HomePage extends StatelessWidget {
         fontFamily: 'Nexa',
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.white,
+          centerTitle: true,
           titleTextStyle: TextStyle(
             color: Colors.black
           ),

@@ -15,6 +15,12 @@ class PageScreenAppointment extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Appointment'),
+        titleTextStyle: TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 21,
+          color: Colors.black,
+        ),
+        centerTitle: true,
       ),
       body: ListView(
         children: [
@@ -33,7 +39,15 @@ class PageScreenAppointment extends StatelessWidget {
                   size: 40,
                 ),
               ),
-              Text('July')
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0),
+                child: Text('July',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              )
             ],
           )
         ],

@@ -1,17 +1,23 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class PharmacyPageScreen extends StatelessWidget {
+
+import '../models/category_data.dart';
+
+class PharmacyPageScreen extends StatefulWidget {
 
   const PharmacyPageScreen(
       {Key key}) : super(key: key);
 
+  @override
+  State<PharmacyPageScreen> createState() => _PharmacyPageScreenState();
+}
 
-
+class _PharmacyPageScreenState extends State<PharmacyPageScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: ListView(
       children: [
         SizedBox(
           height: 8,
@@ -48,11 +54,16 @@ class PharmacyPageScreen extends StatelessWidget {
                   letterSpacing: 1.0
                 ),
               ),
-              onChanged: (value) {},
+              onChanged: (text) {
+                text =text.toLowerCase();
+                setState(() {
+
+                });
+              },
             ),
           ),
         ),
-        
+
         Container(
           height: 500,
           child: Column(

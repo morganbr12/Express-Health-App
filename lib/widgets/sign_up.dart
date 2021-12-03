@@ -1,8 +1,22 @@
 import 'package:expresshealth/models/strings.dart';
 import 'package:flutter/material.dart';
 
-class SignUp extends StatelessWidget {
-  const SignUp({Key key}) : super(key: key);
+
+class SignUp extends StatefulWidget {
+
+  const  SignUp({Key key}) : super(key: key);
+
+  @override
+  State<SignUp> createState() => _SignUpState();
+}
+
+class _SignUpState extends State<SignUp> {
+
+  final TextEditingController firstNameController = TextEditingController();
+  final TextEditingController lastNameController = TextEditingController();
+  final TextEditingController numberController = TextEditingController();
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -11,6 +25,7 @@ class SignUp extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          // signUp
           Container(
             margin: EdgeInsets.only(bottom: 55),
             child: Text(
@@ -21,6 +36,8 @@ class SignUp extends StatelessWidget {
               ),
             ),
           ),
+
+          //first name field Input
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -39,8 +56,12 @@ class SignUp extends StatelessWidget {
                         cursorColor: Colors.white,
                         style: normalWhite,
                         textAlignVertical: TextAlignVertical.bottom,
-                        autofocus: true,
+                        autofocus: false,
                         showCursor: true,
+                        controller: firstNameController,
+                        onSubmitted: (value) {
+                          firstNameController.text = value;
+                        },
                         decoration: InputDecoration(
                         //  errorBorder: (borderSide: BorderSide(color: Colors.red)),
                           enabledBorder: UnderlineInputBorder(
@@ -49,11 +70,14 @@ class SignUp extends StatelessWidget {
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(color: Colors.white),
                           ),
+                          contentPadding: const EdgeInsets.fromLTRB(4, 15, 4, 5)
                         ),
                       ),
                   ),
                 ],
               ),
+
+              // last Name field input
               Container(
                 margin: EdgeInsets.only(left: 30),
                 child: Column(
@@ -71,8 +95,12 @@ class SignUp extends StatelessWidget {
                         cursorColor: Colors.white,
                         style: normalWhite,
                         textAlignVertical: TextAlignVertical.bottom,
-                        autofocus: true,
+                        autofocus: false,
                         showCursor: true,
+                        controller: lastNameController,
+                        onSubmitted: (value) {
+                          lastNameController.text = value;
+                        },
                         decoration: InputDecoration(
                           //  errorBorder: (borderSide: BorderSide(color: Colors.red)),
                           enabledBorder: UnderlineInputBorder(
@@ -81,6 +109,7 @@ class SignUp extends StatelessWidget {
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(color: Colors.white),
                           ),
+                            contentPadding: const EdgeInsets.fromLTRB(4, 15, 4, 5)
                         ),
                       ),
                     ),
@@ -89,6 +118,8 @@ class SignUp extends StatelessWidget {
               ),
             ],
           ),
+
+          // input number field
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -113,8 +144,12 @@ class SignUp extends StatelessWidget {
                   cursorColor: Colors.white,
                   style: normalWhite,
                   textAlignVertical: TextAlignVertical.bottom,
-                  autofocus: true,
+                  autofocus: false,
                   showCursor: true,
+                  controller: numberController,
+                  onSubmitted: (value) {
+                    numberController.text = value;
+                  },
                   decoration: InputDecoration(
                     prefixIcon: IconButton(
                         onPressed: () {},
@@ -128,9 +163,12 @@ class SignUp extends StatelessWidget {
                     focusedBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.white),
                     ),
+                      contentPadding: const EdgeInsets.fromLTRB(4, 15, 4, 5)
                   ),
                 ),
               ),
+
+
               Container(
                 width: MediaQuery.of(context).size.width * 0.45,
                 margin: EdgeInsets.only(left: 30),
@@ -140,7 +178,7 @@ class SignUp extends StatelessWidget {
                     cursorColor: Colors.white,
                     style: normalWhite,
                     textAlignVertical: TextAlignVertical.bottom,
-                    autofocus: true,
+                    autofocus: false,
                     showCursor: true,
                     decoration: InputDecoration(
                       //  errorBorder: (borderSide: BorderSide(color: Colors.red)),
@@ -150,12 +188,16 @@ class SignUp extends StatelessWidget {
                       focusedBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: Colors.white),
                       ),
+                        contentPadding: const EdgeInsets.fromLTRB(4, 15, 4, 5)
                     ),
                   ),
                 ),
               ),
             ],
           ),
+
+
+          // button field
           InkWell(
             onTap: () {},
             child: Container(

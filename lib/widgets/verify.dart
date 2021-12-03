@@ -22,7 +22,8 @@ class Verify extends StatelessWidget {
       children: [
         Container(
           margin: EdgeInsets.only(bottom: 70),
-          child: Text('Sign In',
+          child: Text(
+            'Sign In',
             style: TextStyle(
               fontSize: 47,
               color: Colors.white,
@@ -56,7 +57,7 @@ class Verify extends StatelessWidget {
                       cursorColor: Colors.white,
                       style: normalWhite,
                       textAlignVertical: TextAlignVertical.bottom,
-                      autofocus: true,
+                      autofocus: false,
                       showCursor: true,
                       textAlign: TextAlign.center,
                       decoration: InputDecoration(
@@ -67,6 +68,7 @@ class Verify extends StatelessWidget {
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
                         ),
+                        contentPadding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
                       ),
                     ),
                   ),
@@ -85,7 +87,7 @@ class Verify extends StatelessWidget {
                       cursorColor: Colors.white,
                       style: normalWhite,
                       textAlignVertical: TextAlignVertical.bottom,
-                      autofocus: true,
+                      autofocus: false,
                       showCursor: true,
                       textAlign: TextAlign.center,
                       decoration: InputDecoration(
@@ -96,6 +98,7 @@ class Verify extends StatelessWidget {
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
                         ),
+                        contentPadding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
                       ),
                     ),
                   ),
@@ -114,7 +117,7 @@ class Verify extends StatelessWidget {
                     cursorColor: Colors.white,
                     style: normalWhite,
                     textAlignVertical: TextAlignVertical.bottom,
-                    autofocus: true,
+                    autofocus: false,
                     showCursor: true,
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
@@ -125,6 +128,7 @@ class Verify extends StatelessWidget {
                       focusedBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: Colors.white),
                       ),
+                      contentPadding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
                     ),
                   ),
                 ),
@@ -143,7 +147,7 @@ class Verify extends StatelessWidget {
                     cursorColor: Colors.white,
                     style: normalWhite,
                     textAlignVertical: TextAlignVertical.bottom,
-                    autofocus: true,
+                    autofocus: false,
                     showCursor: true,
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
@@ -154,6 +158,7 @@ class Verify extends StatelessWidget {
                       focusedBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: Colors.white),
                       ),
+                      contentPadding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
                     ),
                   ),
                 ),

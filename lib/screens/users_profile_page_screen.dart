@@ -68,7 +68,8 @@ class UsersProfilePageScreen extends StatelessWidget {
                     1.7),
                 children: [
                   Stack(
-                    children: [Container(
+                    children: [
+                      Container(
                       height: 300,
                       width: double.infinity,
                       child: ClipRRect(

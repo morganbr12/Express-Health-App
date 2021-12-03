@@ -11,3 +11,19 @@ class CategoryData {
     @required this.image,
   });
 }
+
+
+
+
+
+class Drug {
+  final String id;
+  final String title;
+  final double price;
+
+  Drug({
+   this.id,
+   this.title,
+   this.price
+});
+}

@@ -225,3 +225,22 @@ final NewPostData = [
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam laoreet, tellus vitae egestas imperdiet, elit elit cursus ante, in rutrum est nisl a leo. Curabitur ligula turpis, iaculis ac aliquet at, dapibus ut tortor. Integer tincidunt, nulla vitae tempor mattis, nisl lectus tristique magna, nec volutpat magna odio eu magna. Cras aliquet rutrum libero ut placerat..'
   ),
 ];
+
+
+ List<Drug>DrugInfo = [
+  Drug(
+    id: 't1',
+    title: 'paracetamol',
+    price: 22
+  ),
+   Drug(
+       id: 't1',
+       title: 'dragon',
+       price: 22
+   ),
+   Drug(
+       id: 't1',
+       title: 'lina',
+       price: 22
+   ),
+];

@@ -13,13 +13,13 @@ class HelpScreenPage extends StatefulWidget {
 }
 
 class _HelpScreenPageState extends State<HelpScreenPage> {
-  // int _currentState = 0;
-  //
-  // void _onTapNav(int index) {
-  //   setState(() {
-  //     _currentState = index;
-  //   });
-  // }
+  int _currentState = 0;
+
+  void _onTapNav(int index) {
+    setState(() {
+      _currentState = index;
+    });
+  }
 
   final _changes = [
     CallUs(),
@@ -40,7 +40,8 @@ class _HelpScreenPageState extends State<HelpScreenPage> {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 10.0),
-              child: Text('Contact Us',
+              child: Text(
+                'Contact Us',
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.grey
@@ -71,12 +72,15 @@ class _HelpScreenPageState extends State<HelpScreenPage> {
                         SizedBox(
                           width: 6,
                         ),
-                        GestureDetector(
-                          onTap: () {},
-                          child: Text('Call US', style: TextStyle(
-                            fontSize: 19,
-                            // color: Colors.grey
-                          ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0),
+                          child: GestureDetector(
+                            onTap: () {},
+                            child: Text('Call US', style: TextStyle(
+                              fontSize: 19,
+                              // color: Colors.grey
+                            ),
+                            ),
                           ),
                         ),
                       ],
@@ -90,10 +94,13 @@ class _HelpScreenPageState extends State<HelpScreenPage> {
                       ),
                       GestureDetector(
                         onTap: () {},
-                        child: Text('Send Feedback', style: TextStyle(
-                            fontSize: 19,
-                            // color: Colors.grey
-                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 8.0),
+                          child: Text('Send Feedback', style: TextStyle(
+                              fontSize: 19,
+                              // color: Colors.grey
+                          ),
+                          ),
                         ),
                       ),
                     ],

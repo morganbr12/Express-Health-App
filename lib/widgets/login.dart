@@ -4,14 +4,21 @@ import 'package:flutter/material.dart';
 
 
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
   const Login({Key key}) : super(key: key);
 
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
   void verifyPageFx(BuildContext ctx) {
     Navigator.of(ctx).pushNamed(
       "/verify"
     );
   }
+
+  final TextEditingController numberController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -82,6 +89,7 @@ class Login extends StatelessWidget {
                                       focusedBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(color: Colors.white),
                                       ),
+                                        contentPadding: const EdgeInsets.fromLTRB(4, 15, 4, 5)
                                     ),
                                   ),
                                 ),
@@ -98,6 +106,7 @@ class Login extends StatelessWidget {
                                     style: normalWhite,
                                     // textAlignVertical: TextAlignVertical.bottom,
                                     // showCursor: true,
+                                    controller: numberController,
                                     decoration: InputDecoration(
                                       //  errorBorder: (borderSide: BorderSide(color: Colors.red)),
                                       enabledBorder: UnderlineInputBorder(
@@ -106,6 +115,8 @@ class Login extends StatelessWidget {
                                       focusedBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(color: Colors.white),
                                       ),
+                                        contentPadding: const EdgeInsets.fromLTRB(4, 20, 4, 5),
+
                                     ),
                                   ),
                                 ),

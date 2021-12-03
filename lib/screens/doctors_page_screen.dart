@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../models/category_data.dart';
 import '../widgets/doc_page.dart';
-import '../widgets/search_bar_hm.dart';
 
 class DoctorsPageScreen extends StatelessWidget {
   const DoctorsPageScreen({Key key}) : super(key: key);
@@ -37,7 +36,9 @@ class DoctorsPageScreen extends StatelessWidget {
                   letterSpacing: 1.0,
                 ),
               ),
-              onChanged: (value) {},
+              onChanged: (text) {
+
+              },
             ),
           ),
         ),
