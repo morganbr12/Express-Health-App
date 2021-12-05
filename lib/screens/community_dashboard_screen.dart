@@ -139,7 +139,7 @@ class _CommunityDashboardScreenState extends State<CommunityDashboardScreen> {
                   ],
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height,
+                  height: MediaQuery.of(context).size.height * 0.7,
                   child: ListView.builder(
                     itemBuilder: (ctx, _) {
                       return Column(

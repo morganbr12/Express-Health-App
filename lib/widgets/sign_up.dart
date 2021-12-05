@@ -27,7 +27,7 @@ class _SignUpState extends State<SignUp> {
         children: [
           // signUp
           Container(
-            margin: EdgeInsets.only(bottom: 55),
+            margin: EdgeInsets.only(bottom: 40),
             child: Text(
                 'Sign up',
               style: TextStyle(
