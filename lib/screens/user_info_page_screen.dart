@@ -5,6 +5,7 @@ class UserInfoPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
@@ -77,7 +78,7 @@ class UserInfoPage extends StatelessWidget {
                         children: [
                           Container(
                             margin: EdgeInsets.all(8.0),
-                            width: 190,
+                            width: size.width * 0.4,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -97,9 +98,10 @@ class UserInfoPage extends StatelessWidget {
                               ],
                             ),
                           ),
+                          Spacer(),
                           Container(
                             margin: EdgeInsets.all(8.0),
-                            width: 198,
+                            width: size.width * 0.4,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -128,7 +130,7 @@ class UserInfoPage extends StatelessWidget {
                         children: [
                           Container(
                             margin: EdgeInsets.all(8.0),
-                            width: 190,
+                            width: size.width * 0.4,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -148,9 +150,10 @@ class UserInfoPage extends StatelessWidget {
                               ],
                             ),
                           ),
+                          Spacer(),
                           Container(
                             margin: EdgeInsets.all(8.0),
-                            width: 198,
+                            width: size.width * 0.4,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -214,25 +217,22 @@ class UserInfoPage extends StatelessWidget {
                                 Container(
                                   width: 100,
                                   child: TextField(
-
                                     decoration: InputDecoration(
-                                      prefixIcon: Icon(Icons.keyboard_arrow_down),
-                                      hintText: '233'
-                                    ),
+                                        prefixIcon:
+                                            Icon(Icons.keyboard_arrow_down),
+                                        hintText: '233'),
                                   ),
                                 ),
                                 Container(
                                   margin: EdgeInsets.only(left: 30),
                                   width: 200,
                                   child: TextField(
-                                    decoration: InputDecoration(
-                                        hintText: '123456789'
-                                    ),
+                                    decoration:
+                                        InputDecoration(hintText: '123456789'),
                                   ),
                                 )
                               ],
                             ),
-
                           ],
                         ),
                       ),
@@ -274,8 +274,8 @@ class UserInfoPage extends StatelessWidget {
                               ),
                             ),
                             TextField(
-                              decoration: InputDecoration(
-                                  hintText: 'Medical Doctor'),
+                              decoration:
+                                  InputDecoration(hintText: 'Medical Doctor'),
                             ),
                           ],
                         ),
@@ -318,8 +318,7 @@ class UserInfoPage extends StatelessWidget {
                               ),
                             ),
                             TextField(
-                              decoration: InputDecoration(
-                                  hintText: '1A44Pt2'),
+                              decoration: InputDecoration(hintText: '1A44Pt2'),
                             ),
                           ],
                         ),

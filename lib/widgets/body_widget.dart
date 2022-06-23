@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../widgets/category_item.dart';
 import 'schedule_date.dart';
 import 'top_doc.dart';
-import 'search_bar_hm.dart';
+// import 'search_bar_hm.dart';
 
 class HomeScreenBodyWidget extends StatelessWidget {
   const HomeScreenBodyWidget({Key key}) : super(key: key);
@@ -13,7 +13,6 @@ class HomeScreenBodyWidget extends StatelessWidget {
     Navigator.of(ctx).pushNamed('/all_top_doc');
   }
 
-
   void selecteCategoriesSeeAll(BuildContext ctx) {
     Navigator.of(ctx).pushNamed('/all_categories_page');
   }
@@ -21,7 +20,7 @@ class HomeScreenBodyWidget extends StatelessWidget {
   void selectUpcomingSchedule(BuildContext ctx) {
     Navigator.of(ctx).pushNamed('/upcoming_schedule');
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -33,7 +32,8 @@ class HomeScreenBodyWidget extends StatelessWidget {
           Container(
             alignment: Alignment.center,
             child: Container(
-              width: 380,
+              width: MediaQuery.of(context).size.width * 0.9,
+              height: 50,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(50),
                 border: Border.all(
@@ -51,8 +51,7 @@ class HomeScreenBodyWidget extends StatelessWidget {
                   hintStyle: TextStyle(
                       color: Color.fromRGBO(39, 169, 208, 0.4),
                       fontSize: 13,
-                    letterSpacing: 1.0
-                  ),
+                      letterSpacing: 1.0),
                 ),
                 onChanged: (value) {},
               ),
@@ -97,22 +96,23 @@ class HomeScreenBodyWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              Row(children: [
-                Expanded(
-                  child: SizedBox(
-                    height: 130,
-                    child: ListView(
-                      scrollDirection: Axis.horizontal,
-                      children: CategoryDataInformation.map(
-                        (catData) => CategoryItem(
-                          title: catData.title,
-                          image: catData.image,
-                        ),
-                      ).toList(),
+              Row(
+                children: [
+                  Expanded(
+                    child: SizedBox(
+                      height: 130,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: CategoryDataInformation.map(
+                          (catData) => CategoryItem(
+                            title: catData.title,
+                            image: catData.image,
+                          ),
+                        ).toList(),
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
               ),
             ],
           ),

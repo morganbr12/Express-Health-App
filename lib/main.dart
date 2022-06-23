@@ -14,17 +14,11 @@ import './screens/upcoming_schedule_screen.dart';
 import './screens/chat_page_screen.dart';
 import './screens/single_category_screen.dart';
 import './screens/new_chat_screen.dart';
-import './screens/chat_place_screen.dart';
+import 'screens/chat_place_screen.dart';
 import './login_screens/Login_signUp.dart';
 import './login_screens/verify_page.dart';
 import './splashscreen/splashscreen.dart';
 import './login_screens/signup_screen.dart';
-
-
-
-
-
-
 
 void main() {
   runApp(HomePage());
@@ -44,14 +38,9 @@ class HomePage extends StatelessWidget {
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.white,
           centerTitle: true,
-          titleTextStyle: TextStyle(
-            color: Colors.black
-          ),
+          titleTextStyle: TextStyle(color: Colors.black),
           elevation: 0,
-          iconTheme: IconThemeData(
-            color: Colors.black
-          ),
-
+          iconTheme: IconThemeData(color: Colors.black),
         ),
         textTheme: ThemeData.light().textTheme.copyWith(
               bodyText2: TextStyle(
@@ -67,7 +56,7 @@ class HomePage extends StatelessWidget {
             ),
       ),
       // home: EHHomePageScreen(),
-      initialRoute: '/login_signUp',
+      initialRoute: '/',
       routes: {
         '/splash': (ctx) => SplashScreen(),
         '/verify': (ctx) => VerifyPage(),

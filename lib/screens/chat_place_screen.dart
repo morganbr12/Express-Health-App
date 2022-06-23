@@ -10,7 +10,8 @@ class ChatPlaceScreen extends StatefulWidget {
 class _ChatPlaceScreenState extends State<ChatPlaceScreen> {
   @override
   Widget build(BuildContext context) {
-    final information = ModalRoute.of(context).settings.arguments as Map<String, Object>;
+    final information =
+        ModalRoute.of(context).settings.arguments as Map<String, Object>;
     final userName = information['userName'];
     final userImageUrl = information['userImageUrl'];
     final occupation = information['occupation'];
@@ -22,8 +23,8 @@ class _ChatPlaceScreenState extends State<ChatPlaceScreen> {
             height: 40,
             width: 50,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: Colors.black,
+              borderRadius: BorderRadius.circular(15),
+              color: Colors.black,
             ),
             child: ClipRRect(),
           ),
@@ -32,14 +33,14 @@ class _ChatPlaceScreenState extends State<ChatPlaceScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  userName!=null? userName: 'default',
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: Theme.of(context).accentColor,
-                  ),
-                ),
+                // Text(
+                //   userName == null ? userName : Container(),
+                //   style: TextStyle(
+                //     fontSize: 15,
+                //     fontWeight: FontWeight.bold,
+                //     color: Theme.of(context).accentColor,
+                //   ),
+                // ),
                 Text(
                   'Dentist',
                   style: TextStyle(

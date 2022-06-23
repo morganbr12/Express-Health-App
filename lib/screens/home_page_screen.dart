@@ -90,13 +90,14 @@ class _EHHomePageScreenState extends State<EHHomePageScreen> {
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 decoration: BoxDecoration(
+                  // color: Colors.grey,
                   borderRadius: BorderRadius.circular(50),
                   border: Border.all(
-                    color: Theme.of(context).primaryColor,
+                    color: Theme.of(context).primaryColor.withOpacity(0.4),
                   ),
                 ),
                 child: CircleAvatar(
-                  backgroundColor: Colors.white,
+                  backgroundColor: Colors.grey.shade300,
                   child: Icon(
                     Icons.person,
                     color: Theme.of(context).accentColor,
